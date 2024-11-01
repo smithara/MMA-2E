@@ -1,0 +1,30 @@
+{
+    "file.q_file": [
+        "/users/ngp/SwarmPAL/mma-for-swarmpal/MMA_2E/utils/lib/Q_08hours_kernels_1D_Grayver2017.h5",
+        null
+    ],
+    "params.LT_limit": [
+        6.0,
+        null
+    ],
+    "params.dt": [
+        8,
+        null
+    ],
+    "params.max_gm_lat": [
+        65.0,
+        null
+    ],
+    "params.min_gm_lat": [
+        0.0,
+        null
+    ],
+    "params.n_lag_days": [
+        180,
+        null
+    ],
+    "params.n_max": [
+        3,
+        null
+    ]
+}
