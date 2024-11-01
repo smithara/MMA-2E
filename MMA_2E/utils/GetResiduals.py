@@ -26,7 +26,7 @@ def LoadData(params,source='Vires'):
     dsb = get_Data(params.tini,params.tfin,'b')
     # dsm = get_Data(params.tini,params.tfin,'m')
 
-    data= SelectData(pd.concat([dsa,dsb]),params)
+    data= SelectData(pd.concat([dsa,dsb],ignore_index=True),params)
     
     return data
 

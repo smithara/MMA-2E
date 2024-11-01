@@ -187,7 +187,8 @@ defparams = {
                                 check_path_exists],
     'n_lag_days': [180, check_int], 
     'tfin': [dt.now().date() - timedelta(days=11), check_date],
-    'tini': [dt.now().date() - timedelta(days=4),check_date]
+    'tini': [dt.now().date() - timedelta(days=4),check_date],
+    'R_earth': 6371.2
      }
 
 class BasicConfig(dict):
