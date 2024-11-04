@@ -6,6 +6,15 @@ Created on Fri Nov  1 15:57:46 2024
 @author: ngp
 """
 
+import numpy as np
+# import pandas as pd
+import xarray as xr
+import h5py
+import statsmodels.api as sm
+
+
+from utils.SHA_utils import SHA_coeff_index_to_nm
+from utils.SHA_utils import design_SHA
 
 def estimate_SH_coefficients_1D(data,params):
     '''    
@@ -26,7 +35,7 @@ def estimate_SH_coefficients_1D(data,params):
     '''
     Initialisation
     '''
-    model = pd.DataFrame(index=[0])
+    # model = pd.DataFrame(index=[0])
 
     
     n_e_terms = range(1,1+(params.n_max*(params.n_max+2)))
@@ -48,8 +57,7 @@ def estimate_SH_coefficients_1D(data,params):
 
         
         
-    # Here I stopped on July 19 2021
-    # Line 64 in estimate_SH_coefficients_1D.m
+
     if len(data.t)>0 :
         print('Data range and integration time',max(data.t),min(data.t),paramsdt)
         n_bins = int(np.round((max(data.t) - min(data.t))/paramsdt))
@@ -58,7 +66,7 @@ def estimate_SH_coefficients_1D(data,params):
 
     
     t1=np.array([i*paramsdt for i in range(n_bins)])+min(data.t)
-    t2=t1+paramsdt  #np.array([(1+i)*params.dt for i in range(n_bins)])+min(data.t)
+    t2=t1+paramsdt
     
 # 
     #load the Q matrix:
@@ -66,13 +74,11 @@ def estimate_SH_coefficients_1D(data,params):
     with h5py.File(params.q_file, "r") as f:
         # Get the data
         Q_kernels = np.asarray(np.array(list(f['Q_kernels'])))
-        Q_times = np.array(list(f['Q_times']))
         
     
     kernel_length = np.round(params.n_lag_days / params.dt)
     
-    # model.data_per_bin=np.zeros(n_bins)
-    dim1=range(n_bins)
+
     ds_t=t1+(params.dt/2)
     
     Lm=len(terms_e)
@@ -91,14 +97,11 @@ def estimate_SH_coefficients_1D(data,params):
                   },coords={"time": ds_t})
     
     for i in range(n_bins):
-        # print('I do not understand why it stops here: '+str(i))
         if(np.mod(i, 100) == 0):
             print('Done '+str(i)+' out of '+str(n_bins)+'\n')
     
         index = np.logical_and(data.t >= t1[i] , data.t < t2[i])
         if len(index[index])>15:
-            # print('I do not understand why it stops here: '+str(i)+'')
-            # print( str(len(index[index])))
 
             t_bin = data.t[index]
             r_bin = data.r[index]
@@ -112,11 +115,11 @@ def estimate_SH_coefficients_1D(data,params):
                 print('Time bin #'+str(i)+ ' has length of '+str(len(t_bin))+'!')
                 continue        
             
-            A_r_e, A_theta_e, A_phi_e = design_SHA(r_bin/a, theta_bin*rad, \
-                                                       phi_bin*rad, params.n_max, 'ext')
+            A_r_e, A_theta_e, A_phi_e = design_SHA(r_bin/a, \
+                    theta_bin*rad, phi_bin*rad, params.n_max, 'ext')
             
-            A_r_i, A_theta_i, A_phi_i = design_SHA(r_bin/a, theta_bin*rad, \
-                phi_bin*rad, params.n_max, 'int')
+            A_r_i, A_theta_i, A_phi_i = design_SHA(r_bin/a,\
+                    theta_bin*rad, phi_bin*rad, params.n_max, 'int')
             
             B_theta_int = np.zeros(len(t_bin))
             B_phi_int = np.zeros(len(t_bin))
@@ -133,10 +136,13 @@ def estimate_SH_coefficients_1D(data,params):
             idx = 0
             for n in range(1,params.n_max+1):
                 n_indices = np.logical_and(nm_ext[0,:] == n, \
-                                       abs(nm_ext[1,:]) <= params.m_max)
+                            abs(nm_ext[1,:]) <= params.m_max)
                 
                 
-                G_n = np.vstack([A_theta_e[:, n_indices] + Q_kernels[0,n-1]*A_theta_i[:, n_indices], A_phi_e[:, n_indices] + Q_kernels[0,n-1]*A_phi_i[:, n_indices]])
+                G_n = np.vstack([A_theta_e[:, n_indices] + \
+                    Q_kernels[0,n-1]*A_theta_i[:, n_indices], \
+                    A_phi_e[:, n_indices] + \
+                    Q_kernels[0,n-1]*A_phi_i[:, n_indices]])
                 
             
                 
@@ -144,17 +150,21 @@ def estimate_SH_coefficients_1D(data,params):
                 Qt = Q_kernels[0:len(t_past),n-1]
                 for m in range(0,min(params.m_max, n)+1):
        
-                    # q_nm = model.e_gauss[t_past,idx]
                     q_nm = da.qs.data[t_past,idx]
-                    B_theta_int = B_theta_int + np.multiply(Qt,q_nm).sum(axis=0) * A_theta_i[:, idx]
-                    B_phi_int = B_phi_int + np.multiply(Qt,q_nm).sum(axis=0) * A_phi_i[:, idx]
+                    B_theta_int = B_theta_int + np.multiply(Qt,q_nm).sum(axis=0) * \
+                         A_theta_i[:, idx]
+                    B_phi_int = B_phi_int + np.multiply(Qt,q_nm).sum(axis=0) * \
+                        A_phi_i[:, idx]
                     
                     idx = idx + 1;
                     if m > 0:
-                        # s_nm = model.e_gauss[t_past,idx]
                         s_nm = da.qs.data[t_past,idx]
-                        B_theta_int = B_theta_int + np.multiply(Qt,s_nm).sum(axis=0) * A_theta_i[:, idx]
-                        B_phi_int = B_phi_int + np.multiply(Qt,s_nm).sum(axis=0) * A_phi_i[:, idx]
+                        B_theta_int = B_theta_int + \
+                            np.multiply(Qt,s_nm).sum(axis=0) * \
+                            A_theta_i[:, idx]
+                        B_phi_int = B_phi_int +\
+                            np.multiply(Qt,s_nm).sum(axis=0) * \
+                            A_phi_i[:, idx]
                         idx = idx + 1
                 
                 G=np.column_stack((G, G_n))
