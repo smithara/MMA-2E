@@ -186,9 +186,11 @@ defparams = {
     'q_file': [os.path.join(LIB,'Q_08hours_kernels_1D_Grayver2017.h5'),
                                 check_path_exists],
     'n_lag_days': [180, check_int], 
-    'tfin': [dt.now().date() - timedelta(days=11), check_date],
-    'tini': [dt.now().date() - timedelta(days=4),check_date],
-    'R_earth': 6371.2
+    # 'tfin': [dt.now() - timedelta(days=4), check_date],
+    # 'tini': [dt.now() - timedelta(days=11),check_date],
+    'tfin': [dt(2015,5,1), check_date],
+    'tini': [dt(2015,3,1), check_date],
+    'R_earth': [6371.2 , check_float ]
      }
 
 class BasicConfig(dict):

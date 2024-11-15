@@ -31,7 +31,7 @@ def estimate_SH_coefficients_1D(data,params):
     # % General constants
     a   = params['R_earth'] #6371.2
     rad = np.pi/180
-    paramsdt=params['dt']
+    paramsdt=params['dt']/24 # dt in hours, convert to days
     '''
     Initialisation
     '''
@@ -76,10 +76,10 @@ def estimate_SH_coefficients_1D(data,params):
         Q_kernels = np.asarray(np.array(list(f['Q_kernels'])))
         
     
-    kernel_length = np.round(params.n_lag_days / params.dt)
+    kernel_length = np.round(params.n_lag_days / paramsdt)
     
 
-    ds_t=t1+(params.dt/2)
+    ds_t=t1+(paramsdt/2)
     
     Lm=len(terms_e)
     nan_array=np.empty(n_bins)

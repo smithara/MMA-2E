@@ -22,11 +22,16 @@ resname='_magneto_15sec_geo_only_alldata_nonans_2024.txt'
 def LoadData(params,source='Vires'):
     
 
-    dsa = get_Data(params.tini,params.tfin,'a')
-    dsb = get_Data(params.tini,params.tfin,'b')
-    # dsm = get_Data(params.tini,params.tfin,'m')
-
-    data= SelectData(pd.concat([dsa,dsb],ignore_index=True),params)
+    if source=='Vires':
+        dsa = get_Data(params.tini,params.tfin,'a')
+        dsb = get_Data(params.tini,params.tfin,'b')
+        
+        data= SelectData(pd.concat([dsa,dsb],ignore_index=True),params)
+    else:
+        dsa = get_Data(params.tini,params.tfin,'a',source='MMA2F')
+        dsb = get_Data(params.tini,params.tfin,'b',source='MMA2F')
+        dsm = get_Data(params.tini,params.tfin,'m',source='MMA2F')
+        data= SelectData(pd.concat([dsa,dsb,dsm],ignore_index=True),params)
     
     return data
 

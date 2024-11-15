@@ -6,6 +6,7 @@ Created on Mon Nov  4 09:59:20 2024
 @author: ngp
 """
 import numpy as np
+import pyshtools
 
 
 def SHA_coeff_index_to_nm(indices):
