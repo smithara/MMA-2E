@@ -17,7 +17,7 @@ def SHA_coeff_index_to_nm(indices):
     n = np.floor(np.sqrt(indices))
       
     #% Compute orders using three step approach
-    i = indices - (n-1)*(n+1)	
+    i = indices - (n-1)*(n+1)
     j = ((i > 1) & (np.mod(i,2) == 1))
     m = np.floor(i/2)
     m[j] = -m[j]
@@ -150,7 +150,7 @@ def design_SHA_matlab(r, theta, phi, N, i_e_flag='int'):
     dPnm= []
 
     for z in cos_theta:
-        ar, dar = pyshtools.legendre.PlmSchmidt_d1(N,z,csphase=-1)     # % P_n^m and derivatives vrt. theta
+        ar, dar = pyshtools.legendre.PlmSchmidt_d1(N,z,csphase=1)     # % P_n^m and derivatives vrt. theta
         Pnm.append(ar)
         dPnm.append(-(dar)*np.sqrt(1-z*z))
     Pnm=np.array(Pnm)
