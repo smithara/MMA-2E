@@ -13,8 +13,8 @@ import h5py
 import statsmodels.api as sm
 
 
-from utils.SHA_utils import SHA_coeff_index_to_nm
-from utils.SHA_utils import design_SHA
+from .utils.SHA_utils import SHA_coeff_index_to_nm
+from .utils.SHA_utils import design_SHA
 
 def estimate_SH_coefficients_1D(data,params):
     '''    
@@ -83,7 +83,7 @@ def estimate_SH_coefficients_1D(data,params):
     
     Lm=len(terms_e)
     nan_array=np.empty(n_bins)
-    nan_array[:]=np.NaN
+    nan_array[:]=np.nan
     
     da=xr.Dataset({"qs":([n_bins,Lm],np.zeros([n_bins, Lm])),
                   "gh":([n_bins,Lm],np.zeros([n_bins, Lm])),
