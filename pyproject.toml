@@ -1,20 +1,35 @@
 [project]
-name = "swarmpal-mma"
+name = "swarmpal_mma"
 version = "0.1.0"
 description = "Swarm magnetosphere model (MMA) in development for SwarmPAL"
 readme = "README.md"
-requires-python = ">=3.12"
+authors = [
+]
+requires-python = ">=3.10"
 dependencies = [
     "apexpy>=2.1.0",
     "chaosmagpy>=0.13.1",
     "h5py>=3.13.0",
     "ipykernel>=6.29.5",
-    "numpy>=2.2.3",
+    "numpy>=2.2.4",
     "pandas>=2.2.3",
     "pyshtools>=4.13.1",
     "scipy>=1.15.2",
     "spacepy>=0.7.0",
     "statsmodels>=0.14.4",
     "swarmpal",
-    "xarray>=2025.1.2",
+    "xarray>=2025.3.1",
 ]
+
+[project.scripts]
+swarmpal_mma = "swarmpal_mma:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/swarmpal_mma"]
+
+[tool.uv.sources]
+swarmpal = { git = "https://github.com/Swarm-DISC/SwarmPAL", rev = "staging" }
