@@ -1,6 +1,6 @@
 {
     "file.q_file": [
-        "/users/ngp/SwarmPAL/mma-for-swarmpal/MMA_2E/utils/lib/Q_08hours_kernels_1D_Grayver2017.h5",
+        "/users/ngp/SwarmPAL/mma-for-swarmpal/MMA_2E/src/utils/Q_08hours_kernels_1D_Grayver2017/Q_08hours_kernels_1D_Grayver2017.h5",
         null
     ],
     "params.LT_limit": [

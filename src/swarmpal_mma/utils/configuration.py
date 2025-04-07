@@ -86,7 +86,7 @@ from datetime import timedelta as timedelta
 from datetime import datetime as dt
 
 ROOT = os.path.abspath(os.path.dirname(__file__))
-LIB = os.path.join(ROOT, 'lib')
+LIB = os.path.join(ROOT, 'kernels')
 
 def check_path_exists(s):
     """Check that path to file exists."""
