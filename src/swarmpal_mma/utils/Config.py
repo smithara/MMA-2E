@@ -16,7 +16,7 @@ from datetime import timedelta as timedelta
 from datetime import datetime as dt
 
 ROOT = os.path.abspath(os.path.dirname(__file__))
-LIB = os.path.join(ROOT, 'lib') 
+LIB = os.path.join(ROOT, 'kernels') 
 DEFAULTS = {
     'params.max_gm_lat': 60.0,
     'params.min_gm_lat': 0,
