@@ -57,7 +57,7 @@ def myround(x, base=10,up=1):
     return base * (round(x/base)+ up)
 
 
-def map_surface_rtp(ext,fig=False,ax=False,ll='',field='',cm='viridis',lmax=3,vi='theta',lim=0,cobar=True):
+def map_surface_rtp(ext,fig=False,ax=False,ll='',field='',cm='seismic',lmax=3,vi='rad',lim=0,cobar=True):
 
     coeffs= list2matrix(ext,lmax)
     cilm=pysh.SHMagCoeffs.from_array(coeffs,r0=RE,csphase=-1) 
