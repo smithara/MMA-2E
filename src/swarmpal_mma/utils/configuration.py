@@ -14,7 +14,7 @@ Created on Thu Oct 24 13:50:19 2024
     'm_max':     3,
     'ms':        [0, 1, -1, 0, 1, -1, 2, -2, 0, 1, -1, 2, -2, 3, -3],
     'ns':        [1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3],
-    'dt':        8,
+    'delt':        8,
     'coordinates': 'GG' ,
     'q_file': os.path.join(LIB,'Q_08hours_kernels_1D_Grayver2017.h5'),
     'n_lag_days': 180, 
@@ -32,7 +32,7 @@ Created on Thu Oct 24 13:50:19 2024
                                         24h-LT_l.
  'n_max':               `int`           Maximum degree used for the MMA model
  'm_max':               `int`           Maximum order  used for the MMA model
- 'dt':                  `int`           Integration time for the SHA model in hours
+ 'delt':                  `int`           Integration time for the SHA model in hours
  'params.r_surf'         `float`        Reference radius in kilometers
                                         (defaults to Earth's surface radius of
                                         6371.2 km).
@@ -181,7 +181,7 @@ defparams = {
                    lambda x: check_vector(x, len=15)],
     'ns':        [np.array([1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3]),
                    lambda x: check_vector(x, len=15)],
-                  'dt':        [8, check_int],
+    'delt':        [3, check_int],
     'params.coordinates': ['GG', check_string],
     'q_file': [os.path.join(LIB,'Q_08hours_kernels_1D_Grayver2017.h5'),
                                 check_path_exists],

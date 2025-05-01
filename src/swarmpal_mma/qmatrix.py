@@ -31,7 +31,7 @@ def estimate_SH_coefficients_1D(data,params):
     # % General constants
     a   = params['R_earth'] #6371.2
     rad = np.pi/180
-    paramsdt=params['dt']/24 # dt in hours, convert to days
+    paramsdt=params['delt']/24 # dt in hours, convert to days
     '''
     Initialisation
     '''

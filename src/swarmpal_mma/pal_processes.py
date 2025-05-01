@@ -17,12 +17,13 @@ class MMA_SHA_2E(PalProcess):
     def process_name(self):
         return "MMA_SHA_2E"
 
-    def set_config(self, datasets=None, local_time_limit=6.0, max_gm_lat=60.0, min_gm_lat=0.0):
+    def set_config(self, datasets=None, local_time_limit=6.0, max_gm_lat=60.0, min_gm_lat=0.0,delt=8):
         self.config = dict(
             datasets=datasets,
             local_time_limit=local_time_limit,
             max_gm_lat=max_gm_lat,
             min_gm_lat=min_gm_lat,
+            delt=delt,
         )
 
 
