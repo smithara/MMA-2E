@@ -17,7 +17,7 @@ class MMA_SHA_2E(PalProcess):
     def process_name(self):
         return "MMA_SHA_2E"
 
-    def set_config(self, datasets=None, local_time_limit=6.0, max_gm_lat=60.0, min_gm_lat=0.0, measurement_varname="B_NEC", model_varname="B_NEC_Model"):
+    def set_config(self, datasets=None, local_time_limit=6.0, max_gm_lat=60.0, min_gm_lat=0.0,delt=8, measurement_varname="B_NEC", model_varname="B_NEC_Model"):
         self.config = dict(
             datasets=datasets,
             local_time_limit=local_time_limit,
@@ -25,6 +25,8 @@ class MMA_SHA_2E(PalProcess):
             min_gm_lat=min_gm_lat,
             measurement_varname=measurement_varname,
             model_varname=model_varname,
+            delt=delt,
+
         )
 
 

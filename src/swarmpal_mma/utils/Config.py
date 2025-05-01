@@ -25,7 +25,7 @@ DEFAULTS = {
     'm_max':     3,
     'ms':        [0, 1, -1, 0, 1, -1, 2, -2, 0, 1, -1, 2, -2, 3, -3],
     'ns':        [1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3],
-    'params.dt':        8,
+    'params.delt':        8,
     'params.coordinates': 'GG' ,
     'file.q_file': os.path.join(LIB,'Q_08hours_kernels_1D_Grayver2017.h5'),
     'params.n_lag_days': 180, 
