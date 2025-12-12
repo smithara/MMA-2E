@@ -13,8 +13,8 @@ import h5py
 import statsmodels.api as sm
 
 
-from .utils.SHA_utils import SHA_coeff_index_to_nm
-from .utils.SHA_utils import design_SHA
+from utils.SHA_utils import SHA_coeff_index_to_nm
+from utils.SHA_utils import design_SHA
 
 def estimate_SH_coefficients_1D(data,params):
     '''    
@@ -79,7 +79,7 @@ def estimate_SH_coefficients_1D(data,params):
     kernel_length = np.round(params.n_lag_days / paramsdt)
     
 
-    ds_t=t1+(paramsdt/2)
+    ds_t=t1 #+(paramsdt/2)
     
     Lm=len(terms_e)
     nan_array=np.empty(n_bins)

@@ -19,6 +19,7 @@ dependencies = [
     "spacepy>=0.7.0",
     "statsmodels>=0.14.4",
     "swarmpal",
+    "viresclient>=0.14.0",
     "xarray>=2025.3.1",
 ]
 

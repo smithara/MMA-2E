@@ -17,7 +17,7 @@ from utils.Coord_Trans import get_MagLat
 
 
 ResidualsMC4='/users/swarm/L2PSProcessing/MMA_SHA_2E/development_bham/'
-resname='_magneto_15sec_geo_only_alldata_nonans_2025.txt'
+resname='_magneto_15sec_geo_only_alldata_nonans_2025full.txt'
 # resname='_magneto_15sec_geo_only_alldata_nonans_2023C.txt'
 
 def LoadData(params,source='Vires',mss=False):
@@ -26,6 +26,8 @@ def LoadData(params,source='Vires',mss=False):
     if source=='Vires':
         dsa = get_Data(params.tini,params.tfin,'a')
         dsb = get_Data(params.tini,params.tfin,'b')
+        #dsg = get_Data(params.tini,params.tfin,'GA')
+        
         
         data= SelectData(pd.concat([dsa,dsb],ignore_index=True),params)
     else:
