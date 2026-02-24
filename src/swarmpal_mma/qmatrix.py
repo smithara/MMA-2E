@@ -13,8 +13,8 @@ import h5py
 import statsmodels.api as sm
 
 
-from utils.SHA_utils import SHA_coeff_index_to_nm
-from utils.SHA_utils import design_SHA
+from swarmpal_mma.utils.SHA_utils import SHA_coeff_index_to_nm
+from swarmpal_mma.utils.SHA_utils import design_SHA
 
 def estimate_SH_coefficients_1D(data,params):
     '''    

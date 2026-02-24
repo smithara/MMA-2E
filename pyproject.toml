@@ -12,7 +12,6 @@ dependencies = [
     "chaosmagpy>=0.13.1",
     "h5py>=3.13.0",
     "ipykernel>=6.29.5",
-    "numpy>=2.2.4",
     "pandas>=2.2.3",
     "pyshtools>=4.13.1",
     "scipy>=1.15.2",
@@ -35,3 +34,15 @@ packages = ["src/swarmpal_mma"]
 
 [tool.uv.sources]
 swarmpal = { git = "https://github.com/Swarm-DISC/SwarmPAL", rev = "staging" }
+# swarmpal = { path = "../SwarmPAL", editable = true }
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "nbmake>=1.5.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["."]
+python_files = ["MMA_SHA_2E.ipynb"]
+addopts = "--nbmake"

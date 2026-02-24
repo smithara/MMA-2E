@@ -17,20 +17,26 @@ class MMA_SHA_2E(PalProcess):
     def process_name(self):
         return "MMA_SHA_2E"
 
-    def set_config(self, datasets=None, local_time_limit=6.0, max_gm_lat=60.0, min_gm_lat=0.0,delt=8):
+    def set_config(self, datasets=None, local_time_limit=6.0, max_gm_lat=60.0, min_gm_lat=0.0,delt=8, measurement_varname="B_NEC", model_varname="B_NEC_Model"):
         self.config = dict(
             datasets=datasets,
             local_time_limit=local_time_limit,
             max_gm_lat=max_gm_lat,
             min_gm_lat=min_gm_lat,
+            measurement_varname=measurement_varname,
+            model_varname=model_varname,
             delt=delt,
+
         )
 
 
-    @staticmethod
-    def _extract_simplified_dataframe(ds):
+    def _extract_simplified_dataframe(self, ds):
         """Turn a dataset into the dataframe that the MMA code works with"""
-        B_res_NEC = ds.swarmpal.magnetic_residual()
+        try:
+            B_res_NEC = ds[self.config["measurement_varname"]] - ds[self.config["model_varname"]]
+        except KeyError:
+            # If the provided variable names are not there, try the SwarmPAL automatic detection
+            B_res_NEC = ds.swarmpal.magnetic_residual()
         return pd.DataFrame(
             {
                 "t": mjd2000(ds["Timestamp"]),
@@ -40,7 +46,7 @@ class MMA_SHA_2E(PalProcess):
                 "B_rtp_1": -B_res_NEC.data[:, 2],  # Rad is -Center
                 "B_rtp_2": -B_res_NEC.data[:, 0],  # Theta is -North
                 "B_rtp_3": B_res_NEC.data[:, 1],
-                "sat": ds["Spacecraft"],
+                # "sat": ds["Spacecraft"],
                 # 'MLT'    : ds["MLT"],
                 "time": ds["Timestamp"],
             }
