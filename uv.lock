@@ -2,20 +2,625 @@ version = 1
 revision = 3
 requires-python = ">=3.10"
 resolution-markers = [
-    "python_full_version >= '3.12'",
-    "python_full_version == '3.11.*'",
-    "python_full_version < '3.11'",
+    "python_full_version == '3.14.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.14.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "python_full_version == '3.13.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.13.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "python_full_version == '3.12.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.12.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version >= '3.12' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'arm64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.12' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.12' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.15' and platform_machine == 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.12' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
+    "python_full_version == '3.11.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.11.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version == '3.11.*' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version == '3.11.*' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version == '3.11.*' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version == '3.11.*' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
+    "python_full_version < '3.11' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version < '3.11' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version < '3.11' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version < '3.11' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version < '3.11' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version < '3.11' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
 ]
 
 [[package]]
 name = "apexpy"
 version = "2.1.0"
 source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "(python_full_version >= '3.12' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'arm64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.12' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.12' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.15' and platform_machine == 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.12' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
+    "(python_full_version == '3.11.*' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version == '3.11.*' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version == '3.11.*' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version == '3.11.*' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
+    "(python_full_version < '3.11' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version < '3.11' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version < '3.11' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version < '3.11' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
+]
 dependencies = [
-    { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
-    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version < '3.11' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version < '3.11' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version < '3.11' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version < '3.11' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')" },
+    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version >= '3.11' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'arm64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.11' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.11' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.15' and platform_machine == 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.11' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/b9/03/3b9f9b2af6eb77e4e227a5bce913daa72cd53ec40556fcd027ec4bd61fea/apexpy-2.1.0.tar.gz", hash = "sha256:166d38987468ef671ab989a19178c56b6185c62179769fe23287a6b2322dda6c", size = 341107, upload-time = "2025-01-07T16:10:31.633Z" }
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-macosx_15_0_arm64.whl" }
+resolution-markers = [
+    "python_full_version < '3.11' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+]
+dependencies = [
+    { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11' and platform_machine == 'arm64' and sys_platform == 'darwin'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-macosx_15_0_arm64.whl", hash = "sha256:dcac3998f243d9b1e59e9f5aa6d0eae0f2972aff31bb293c1c8f795611f458b9" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-macosx_15_0_x86_64.whl" }
+resolution-markers = [
+    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+]
+dependencies = [
+    { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-macosx_15_0_x86_64.whl", hash = "sha256:79cf80c3f3cb3c79144c212e4c94dd12a106c003f1d737727a6904778dfcb3d7" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" }
+resolution-markers = [
+    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+]
+dependencies = [
+    { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'linux'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:d8e4e35c95604b718acdd7fb1d9298d08f0caad551dcebc9ab1118f5b08c9460" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-win_amd64.whl" }
+resolution-markers = [
+    "python_full_version < '3.11' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+]
+dependencies = [
+    { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11' and platform_machine == 'AMD64' and sys_platform == 'win32'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-win_amd64.whl", hash = "sha256:eccc2678b3c3b9f240ed7723d80111face4f2da54b24a6f039c552f586292e27" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-macosx_15_0_arm64.whl" }
+resolution-markers = [
+    "python_full_version == '3.11.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+]
+dependencies = [
+    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.11.*' and platform_machine == 'arm64' and sys_platform == 'darwin'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-macosx_15_0_arm64.whl", hash = "sha256:5c6491c75c150a76d4d6fbf0866d322b7936b08408a8a46fed35e6ab44ef97ef" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-macosx_15_0_x86_64.whl" }
+resolution-markers = [
+    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+]
+dependencies = [
+    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-macosx_15_0_x86_64.whl", hash = "sha256:5cea956d9e63a0db573a65567729f2731b64e80cf7c9fd76989d3fdb6169bc53" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" }
+resolution-markers = [
+    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+]
+dependencies = [
+    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'linux'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:aed0d42e059be5ed517135a29b74440f21f5dc31c34d9dd4323792b03e4858a3" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-win_amd64.whl" }
+resolution-markers = [
+    "python_full_version == '3.11.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+]
+dependencies = [
+    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.11.*' and platform_machine == 'AMD64' and sys_platform == 'win32'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-win_amd64.whl", hash = "sha256:236207d4c8012ec0a5d364e370d3a294ae417e2f848427443116a41f9130cc7a" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-macosx_15_0_arm64.whl" }
+resolution-markers = [
+    "python_full_version == '3.12.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+]
+dependencies = [
+    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.12.*' and platform_machine == 'arm64' and sys_platform == 'darwin'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-macosx_15_0_arm64.whl", hash = "sha256:c0e6bc8b65bd940838379f43763faada707101b12cde4879b2aa359188e95996" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-macosx_15_0_x86_64.whl" }
+resolution-markers = [
+    "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+]
+dependencies = [
+    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-macosx_15_0_x86_64.whl", hash = "sha256:3af36802d94af52e45b178df13d78c1b1d84d0aa2fffc4975302f8447f0d637f" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" }
+resolution-markers = [
+    "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+]
+dependencies = [
+    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'linux'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:7459da80b63861e256b30381010a07edef71de0a5e0477ae9fdfeb16aca8236b" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-win_amd64.whl" }
+resolution-markers = [
+    "python_full_version == '3.12.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+]
+dependencies = [
+    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.12.*' and platform_machine == 'AMD64' and sys_platform == 'win32'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-win_amd64.whl", hash = "sha256:e51b5a74fd1526f244dc801fd1088b6467b1974ee3bc3a312e98b77a8172f4fc" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-macosx_15_0_arm64.whl" }
+resolution-markers = [
+    "python_full_version == '3.13.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+]
+dependencies = [
+    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.13.*' and platform_machine == 'arm64' and sys_platform == 'darwin'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-macosx_15_0_arm64.whl", hash = "sha256:638dd5c7b0de61f85f60c32d9b1b3fdfa09d64f9f444ae0f861d1ac2779f577c" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-macosx_15_0_x86_64.whl" }
+resolution-markers = [
+    "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+]
+dependencies = [
+    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-macosx_15_0_x86_64.whl", hash = "sha256:577ab6139e29fcaf354cc53871a4ad60261e233566e43f8a8cebaa933ba38950" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" }
+resolution-markers = [
+    "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+]
+dependencies = [
+    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'linux'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:620830d61fa1c75b316a72c4f4850109c3596cf59b5f83a4c3d8a0a16b41e82c" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-win_amd64.whl" }
+resolution-markers = [
+    "python_full_version == '3.13.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+]
+dependencies = [
+    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.13.*' and platform_machine == 'AMD64' and sys_platform == 'win32'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-win_amd64.whl", hash = "sha256:723bd0f8ab0831adb6b443d0174ed2269a016bd0baab6e11d722850692729607" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-macosx_15_0_arm64.whl" }
+resolution-markers = [
+    "python_full_version == '3.14.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+]
+dependencies = [
+    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.14.*' and platform_machine == 'arm64' and sys_platform == 'darwin'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-macosx_15_0_arm64.whl", hash = "sha256:e956ee48af22c2464fc87d025cd0f7ad48bf4c1c7306fdd9c1f8c71774334e28" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-macosx_15_0_x86_64.whl" }
+resolution-markers = [
+    "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+]
+dependencies = [
+    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-macosx_15_0_x86_64.whl", hash = "sha256:7b38baffd8413964a135596005e345f0f6edb727f1efe150c171577e09cff98e" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" }
+resolution-markers = [
+    "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+]
+dependencies = [
+    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'linux'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:8ffa4f06051a23d6205cba7307b740281dd4da8c77c789701bca2e766faa3953" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
+
+[[package]]
+name = "apexpy"
+version = "2.1.0"
+source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-win_amd64.whl" }
+resolution-markers = [
+    "python_full_version == '3.14.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+]
+dependencies = [
+    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.14.*' and platform_machine == 'AMD64' and sys_platform == 'win32'" },
+]
+wheels = [
+    { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-win_amd64.whl", hash = "sha256:154ddb1ce7d92e784af75e0444590ce9a3e3ad6c72bef295468e301cccd3234c" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "coverage", marker = "extra == 'test'" },
+    { name = "flake8", marker = "extra == 'test'" },
+    { name = "numpy", specifier = ">=1.19.5" },
+    { name = "pyproject-parser", marker = "extra == 'doc'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pytest-xdist", marker = "extra == 'test'" },
+    { name = "sphinx", marker = "extra == 'doc'", specifier = ">=1.3" },
+    { name = "sphinx-autoapi", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+]
+provides-extras = ["test", "doc"]
 
 [[package]]
 name = "appnope"
@@ -31,7 +636,11 @@ name = "astropy"
 version = "6.1.7"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version < '3.11'",
+    "python_full_version < '3.11' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version < '3.11' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version < '3.11' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version < '3.11' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version < '3.11' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version < '3.11' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
 ]
 dependencies = [
     { name = "astropy-iers-data", marker = "python_full_version < '3.11'" },
@@ -77,8 +686,24 @@ name = "astropy"
 version = "7.2.0"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version >= '3.12'",
-    "python_full_version == '3.11.*'",
+    "python_full_version == '3.14.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.14.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "python_full_version == '3.13.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.13.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "python_full_version == '3.12.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.12.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version >= '3.12' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'arm64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.12' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.12' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.15' and platform_machine == 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.12' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
+    "python_full_version == '3.11.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.11.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version == '3.11.*' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version == '3.11.*' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version == '3.11.*' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version == '3.11.*' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
 ]
 dependencies = [
     { name = "astropy-iers-data", marker = "python_full_version >= '3.11'" },
@@ -460,7 +1085,11 @@ name = "contourpy"
 version = "1.3.2"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version < '3.11'",
+    "python_full_version < '3.11' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version < '3.11' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version < '3.11' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version < '3.11' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version < '3.11' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version < '3.11' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
 ]
 dependencies = [
     { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
@@ -530,8 +1159,24 @@ name = "contourpy"
 version = "1.3.3"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version >= '3.12'",
-    "python_full_version == '3.11.*'",
+    "python_full_version == '3.14.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.14.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "python_full_version == '3.13.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.13.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "python_full_version == '3.12.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.12.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version >= '3.12' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'arm64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.12' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.12' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.15' and platform_machine == 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.12' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
+    "python_full_version == '3.11.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.11.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version == '3.11.*' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version == '3.11.*' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version == '3.11.*' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version == '3.11.*' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
 ]
 dependencies = [
     { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
@@ -910,7 +1555,11 @@ name = "ipython"
 version = "8.37.0"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version < '3.11'",
+    "python_full_version < '3.11' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version < '3.11' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version < '3.11' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version < '3.11' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version < '3.11' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version < '3.11' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
 ]
 dependencies = [
     { name = "colorama", marker = "python_full_version < '3.11' and sys_platform == 'win32'" },
@@ -935,8 +1584,24 @@ name = "ipython"
 version = "9.8.0"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version >= '3.12'",
-    "python_full_version == '3.11.*'",
+    "python_full_version == '3.14.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.14.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "python_full_version == '3.13.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.13.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "python_full_version == '3.12.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.12.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version >= '3.12' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'arm64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.12' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.12' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.15' and platform_machine == 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.12' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
+    "python_full_version == '3.11.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.11.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version == '3.11.*' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version == '3.11.*' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version == '3.11.*' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version == '3.11.*' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
 ]
 dependencies = [
     { name = "colorama", marker = "python_full_version >= '3.11' and sys_platform == 'win32'" },
@@ -1430,7 +2095,11 @@ name = "numpy"
 version = "2.2.6"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version < '3.11'",
+    "python_full_version < '3.11' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version < '3.11' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version < '3.11' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version < '3.11' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version < '3.11' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version < '3.11' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/76/21/7d2a95e4bba9dc13d043ee156a356c0a8f0c6309dff6b21b4d71a073b8a8/numpy-2.2.6.tar.gz", hash = "sha256:e29554e2bef54a90aa5cc07da6ce955accb83f21ab5de01a62c8478897b264fd", size = 20276440, upload-time = "2025-05-17T22:38:04.611Z" }
 wheels = [
@@ -1495,8 +2164,24 @@ name = "numpy"
 version = "2.3.5"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version >= '3.12'",
-    "python_full_version == '3.11.*'",
+    "python_full_version == '3.14.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.14.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "python_full_version == '3.13.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.13.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "python_full_version == '3.12.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.12.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version >= '3.12' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'arm64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.12' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.12' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.15' and platform_machine == 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.12' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
+    "python_full_version == '3.11.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.11.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version == '3.11.*' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version == '3.11.*' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version == '3.11.*' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version == '3.11.*' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/76/65/21b3bc86aac7b8f2862db1e808f1ea22b028e30a225a34a5ede9bf8678f2/numpy-2.3.5.tar.gz", hash = "sha256:784db1dcdab56bf0517743e746dfb0f885fc68d948aba86eeec2cba234bdf1c0", size = 20584950, upload-time = "2025-11-16T22:52:42.067Z" }
 wheels = [
@@ -1673,7 +2358,7 @@ name = "pexpect"
 version = "4.9.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "ptyprocess" },
+    { name = "ptyprocess", marker = "python_full_version >= '3.15' or platform_machine != 'AMD64' or sys_platform != 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/42/92/cc564bf6381ff43ce1f4d06852fc19a2f11d180f23dc32d9588bee2f149d/pexpect-4.9.0.tar.gz", hash = "sha256:ee7d41123f3c9911050ea2c2dac107568dc43b2d3b0c7557a33212c398ead30f", size = 166450, upload-time = "2023-11-25T09:07:26.339Z" }
 wheels = [
@@ -1979,7 +2664,11 @@ name = "pyproj"
 version = "3.7.1"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version < '3.11'",
+    "python_full_version < '3.11' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version < '3.11' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version < '3.11' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version < '3.11' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version < '3.11' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version < '3.11' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
 ]
 dependencies = [
     { name = "certifi", marker = "python_full_version < '3.11'" },
@@ -2025,8 +2714,24 @@ name = "pyproj"
 version = "3.7.2"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version >= '3.12'",
-    "python_full_version == '3.11.*'",
+    "python_full_version == '3.14.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.14.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "python_full_version == '3.13.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.13.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "python_full_version == '3.12.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.12.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version >= '3.12' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'arm64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.12' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.12' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.15' and platform_machine == 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.12' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
+    "python_full_version == '3.11.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.11.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version == '3.11.*' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version == '3.11.*' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version == '3.11.*' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version == '3.11.*' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
 ]
 dependencies = [
     { name = "certifi", marker = "python_full_version >= '3.11'" },
@@ -2467,7 +3172,11 @@ name = "scipy"
 version = "1.15.3"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version < '3.11'",
+    "python_full_version < '3.11' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version < '3.11' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version < '3.11' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version < '3.11' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version < '3.11' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version < '3.11' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
 ]
 dependencies = [
     { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
@@ -2526,8 +3235,24 @@ name = "scipy"
 version = "1.16.3"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version >= '3.12'",
-    "python_full_version == '3.11.*'",
+    "python_full_version == '3.14.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.14.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "python_full_version == '3.13.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.13.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "python_full_version == '3.12.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.12.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version >= '3.12' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'arm64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.12' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.12' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.15' and platform_machine == 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.12' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
+    "python_full_version == '3.11.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.11.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version == '3.11.*' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version == '3.11.*' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version == '3.11.*' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version == '3.11.*' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
 ]
 dependencies = [
     { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
@@ -2784,7 +3509,27 @@ name = "swarmpal-mma"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
-    { name = "apexpy" },
+    { name = "apexpy", version = "2.1.0", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version >= '3.15' and platform_machine == 'arm64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and sys_platform == 'linux') or (python_full_version >= '3.15' and sys_platform == 'win32') or (platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (platform_machine != 'x86_64' and sys_platform == 'linux') or (platform_machine != 'AMD64' and sys_platform == 'win32') or (sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-macosx_15_0_arm64.whl" }, marker = "python_full_version < '3.11' and platform_machine == 'arm64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-macosx_15_0_x86_64.whl" }, marker = "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" }, marker = "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-win_amd64.whl" }, marker = "python_full_version < '3.11' and platform_machine == 'AMD64' and sys_platform == 'win32'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-macosx_15_0_arm64.whl" }, marker = "python_full_version == '3.11.*' and platform_machine == 'arm64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-macosx_15_0_x86_64.whl" }, marker = "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" }, marker = "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-win_amd64.whl" }, marker = "python_full_version == '3.11.*' and platform_machine == 'AMD64' and sys_platform == 'win32'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-macosx_15_0_arm64.whl" }, marker = "python_full_version == '3.12.*' and platform_machine == 'arm64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-macosx_15_0_x86_64.whl" }, marker = "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" }, marker = "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-win_amd64.whl" }, marker = "python_full_version == '3.12.*' and platform_machine == 'AMD64' and sys_platform == 'win32'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-macosx_15_0_arm64.whl" }, marker = "python_full_version == '3.13.*' and platform_machine == 'arm64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-macosx_15_0_x86_64.whl" }, marker = "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" }, marker = "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-win_amd64.whl" }, marker = "python_full_version == '3.13.*' and platform_machine == 'AMD64' and sys_platform == 'win32'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-macosx_15_0_arm64.whl" }, marker = "python_full_version == '3.14.*' and platform_machine == 'arm64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-macosx_15_0_x86_64.whl" }, marker = "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" }, marker = "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-win_amd64.whl" }, marker = "python_full_version == '3.14.*' and platform_machine == 'AMD64' and sys_platform == 'win32'" },
     { name = "cartopy" },
     { name = "chaosmagpy" },
     { name = "h5py" },
@@ -2802,6 +3547,28 @@ dependencies = [
 ]
 
 [package.dev-dependencies]
+apexpy-wheels = [
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-macosx_15_0_arm64.whl" }, marker = "python_full_version < '3.11' and platform_machine == 'arm64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-macosx_15_0_x86_64.whl" }, marker = "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" }, marker = "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-win_amd64.whl" }, marker = "python_full_version < '3.11' and platform_machine == 'AMD64' and sys_platform == 'win32'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-macosx_15_0_arm64.whl" }, marker = "python_full_version == '3.11.*' and platform_machine == 'arm64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-macosx_15_0_x86_64.whl" }, marker = "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" }, marker = "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-win_amd64.whl" }, marker = "python_full_version == '3.11.*' and platform_machine == 'AMD64' and sys_platform == 'win32'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-macosx_15_0_arm64.whl" }, marker = "python_full_version == '3.12.*' and platform_machine == 'arm64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-macosx_15_0_x86_64.whl" }, marker = "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" }, marker = "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-win_amd64.whl" }, marker = "python_full_version == '3.12.*' and platform_machine == 'AMD64' and sys_platform == 'win32'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-macosx_15_0_arm64.whl" }, marker = "python_full_version == '3.13.*' and platform_machine == 'arm64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-macosx_15_0_x86_64.whl" }, marker = "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" }, marker = "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-win_amd64.whl" }, marker = "python_full_version == '3.13.*' and platform_machine == 'AMD64' and sys_platform == 'win32'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-macosx_15_0_arm64.whl" }, marker = "python_full_version == '3.14.*' and platform_machine == 'arm64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-macosx_15_0_x86_64.whl" }, marker = "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" }, marker = "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "apexpy", version = "2.1.0", source = { url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-win_amd64.whl" }, marker = "python_full_version == '3.14.*' and platform_machine == 'AMD64' and sys_platform == 'win32'" },
+]
 dev = [
     { name = "nbmake" },
     { name = "pytest" },
@@ -2825,6 +3592,28 @@ requires-dist = [
 ]
 
 [package.metadata.requires-dev]
+apexpy-wheels = [
+    { name = "apexpy", marker = "python_full_version == '3.10.*' and platform_machine == 'arm64' and sys_platform == 'darwin'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-macosx_15_0_arm64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.11.*' and platform_machine == 'arm64' and sys_platform == 'darwin'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-macosx_15_0_arm64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.12.*' and platform_machine == 'arm64' and sys_platform == 'darwin'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-macosx_15_0_arm64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.13.*' and platform_machine == 'arm64' and sys_platform == 'darwin'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-macosx_15_0_arm64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.14.*' and platform_machine == 'arm64' and sys_platform == 'darwin'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-macosx_15_0_arm64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.10.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-macosx_15_0_x86_64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-macosx_15_0_x86_64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-macosx_15_0_x86_64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-macosx_15_0_x86_64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-macosx_15_0_x86_64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.10.*' and platform_machine == 'x86_64' and sys_platform == 'linux'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'linux'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'linux'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'linux'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'linux'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.10.*' and platform_machine == 'AMD64' and sys_platform == 'win32'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp310-cp310-win_amd64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.11.*' and platform_machine == 'AMD64' and sys_platform == 'win32'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp311-cp311-win_amd64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.12.*' and platform_machine == 'AMD64' and sys_platform == 'win32'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp312-cp312-win_amd64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.13.*' and platform_machine == 'AMD64' and sys_platform == 'win32'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp313-cp313-win_amd64.whl" },
+    { name = "apexpy", marker = "python_full_version == '3.14.*' and platform_machine == 'AMD64' and sys_platform == 'win32'", url = "https://github.com/smithara/apexpy/releases/download/v-2.1.0-binaries-v2/apexpy-2.1.0-cp314-cp314-win_amd64.whl" },
+]
 dev = [
     { name = "nbmake", specifier = ">=1.5.0" },
     { name = "pytest", specifier = ">=8.0.0" },
@@ -2985,7 +3774,11 @@ name = "xarray"
 version = "2025.6.1"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version < '3.11'",
+    "python_full_version < '3.11' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version < '3.11' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version < '3.11' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version < '3.11' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version < '3.11' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version < '3.11' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version < '3.11' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
 ]
 dependencies = [
     { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
@@ -3002,8 +3795,24 @@ name = "xarray"
 version = "2025.12.0"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version >= '3.12'",
-    "python_full_version == '3.11.*'",
+    "python_full_version == '3.14.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.14.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.14.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "python_full_version == '3.13.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.13.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.13.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "python_full_version == '3.12.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.12.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.12.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version >= '3.12' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'arm64' and sys_platform == 'darwin') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'darwin') or (python_full_version >= '3.12' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.15' and platform_machine == 'x86_64' and sys_platform == 'linux') or (python_full_version >= '3.12' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.15' and platform_machine == 'AMD64' and sys_platform == 'win32') or (python_full_version >= '3.12' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
+    "python_full_version == '3.11.*' and platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "python_full_version == '3.11.*' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "python_full_version == '3.11.*' and platform_machine == 'AMD64' and sys_platform == 'win32'",
+    "(python_full_version == '3.11.*' and platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (python_full_version == '3.11.*' and platform_machine != 'x86_64' and sys_platform == 'linux') or (python_full_version == '3.11.*' and platform_machine != 'AMD64' and sys_platform == 'win32') or (python_full_version == '3.11.*' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
 ]
 dependencies = [
     { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
